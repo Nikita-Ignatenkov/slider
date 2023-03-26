@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;1,400&family=Yeseva+One&display=swap');
+
+
+body {
+	margin: 0;
+	font-family: 'Nunito Sans';
+	font-weight: 400;
+}
+
+body * {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+@media (max-width: 1250px) {
+	.container {
+		max-width: 970px;
+	}
+}
+
+@media (max-width: 992px) {
+	.container {
+		max-width: 750px;
+	}
+}
+
+@media (max-width: 767px) {
+	.container {
+		max-width: none;
+	}
+}
+
+/*----проекты----*/
+
+.projects {
+	background-color: #131313;
+	margin: 0;
+	padding-bottom: 416px;
+}
+
+@media screen and (max-width: 1250px) {
+	.projects {
+		padding-bottom: 10px;
+	}
+}
+
+.projects__container {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 1025px) {
+	.projects__container {
+		flex-direction: column-reverse;
+	}
+}
+
+.slider__tab {
+	padding-top: 107px;
+	display: flex;
+	justify-content: space-between;
+	width: 623px;
+	margin-bottom: 45px;
+}
+
+.tab__text.active {
+	color: #E3B873;
+	border-bottom: 2px solid #E3B873;
+	padding-bottom: 6px;
+}
+
+.tab__text {
+	font-family: 'Yeseva One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 25px;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.3);
+	border-bottom: 2px solid #131313;
+	text-decoration: none;
+}
+
+.projects__content {
+	padding-top: 176px;
+}
+
+@media screen and (max-width: 1250px) {
+	.projects__content {
+		padding-top: 36px;
+	}
+}
+
+.content__img {
+	position: relative;
+	width: 679px;
+	height: 482px;
+}
+
+
+.content__img .image {
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	transition: opacity 800ms ease;
+}
+
+.content__img .image.active {
+	opacity: 1;
+}
+
+.slider__arrows {
+	display: flex;
+}
+
+.slider__arrow {
+	height: 100%;
+}
+
+.slider__arrow:hover {
+	opacity: 1;
+}
+
+.slider__arrow.left {
+	left: 0;
+}
+
+.slider__arrow.right {
+	right: 0;
+}
+
+.slider__dots {
+	display: flex;
+	justify-content: center;
+	width: 20%;
+}
+
+.slider__dots-item {
+	width: 10px;
+	height: 10px;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+	transition: background 0.4s ease;
+}
+
+.slider__dots-item:hover,
+.slider__dots-item.active {
+	background: #FFFFFF
+}
+
+.subtitle {
+	font-family: 'Yeseva One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 27px;
+	line-height: 37px;
+	letter-spacing: -0.07em;
+	text-transform: uppercase;
+	color: #E3B873;
+	padding-bottom: 34px;
+}
+
+@media screen and (max-width: 1250px) {
+	.subtitle {
+		font-size: 22px;
+		line-height: 138.6%;
+		text-align: center;
+	}
+}
+
+.content__text {
+	font-size: 14px;
+	line-height: 27px;
+	color: #FFFFFF;
+	padding-bottom: 42px;
+	padding-right: 50px;
+}
+
+@media screen and (max-width: 1250px) {
+	.content__text {
+		font-size: 11px;
+		line-height: 158.48%;
+		text-align: center;
+		padding-right: 0;
+	}
+}
+
+.parameter {
+	display: grid;
+	grid-template-columns: 180px 180px;
+	grid-template-rows: 120px 120px;
+}
+
+@media screen and (max-width: 1250px) {
+	.parameter {
+		grid-template-columns: 150px 150px;
+		padding-top: 36px;
+	}
+}
+
+.parameter__item {
+	list-style: none;
+}
+
+.parameter__title {
+	font-family: 'Yeseva One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 25px;
+	text-transform: uppercase;
+	color: #E3B873;
+}
+
+@media screen and (max-width: 600px) {
+	.parameter__title {
+		font-size: 14px;
+		line-height: 138.6%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.parameter__item {
+		font-size: 11px;
+		line-height: 135.84%;
+	}
+}
+
+.txt {
+	font-family: 'Nunito Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 21px;
+	color: #FFFFFF;
+	opacity: 0;
+	text-transform: capitalize;
+	position: absolute;
+}
+
+.txt.active {
+	opacity: 1;
+}
